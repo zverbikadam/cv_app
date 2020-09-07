@@ -1,0 +1,37 @@
+.education-card {
+    border: 2px solid #006B8F;
+    border-radius: 10px;
+
+    width: 70%;
+    margin: 10px auto 0px auto;
+
+    font-size: calc(6px + 1vmin);
+    text-align: left;
+}
+
+.card-header {
+    border-bottom: 1px solid #006B8F;
+    padding: 10px;
+}
+
+.card-main {
+    padding: 20px 10px;
+    font-size: calc(9px + 1vmin);
+}
+
+.card-name, .card-heading, .card-year {
+    margin-left: 10px;
+}
+
+.card-year {
+    margin-top: 0px;
+    font-size: calc(7px + 1vmin);
+}
+
+.card-heading {
+    display: inline;
+}
+
+.card-p {
+    display: inline;
+}

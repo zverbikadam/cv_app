@@ -1,0 +1,96 @@
+{
+    "en": {
+        "current": {
+            "name": "Slovak university of technology in Bratislava",
+            "faculty": "Faculty of Materials Science and Technology in Trnava",
+            "year": "2020 - Current",
+            "degree": "Master degree",
+            "field_of_study": "Process Automation and Informatization in Industry",
+            "thesis": "",
+            "thesis_description": "",
+            "final_examination": "",
+            "city": "Trnava",
+            "country": "Slovak republic"
+        },
+        "previous": [
+            {
+                "name": "Slovak university of technology in Bratislava",
+                "faculty": "Faculty of Materials Science and Technology in Trnava",
+                "year": "2017 - 2020",
+                "degree": "Bachelor degree",
+                "field_of_study": "Applied Informatics and Automation in Industry",
+                "thesis": "Client application for data visualization as a part of sensory information system",
+                "thesis_description": "",
+                "final_examination": "Methods and techniques of information technology system design, Basics of automatic control systems",
+                "city": "Trnava",
+                "country": "Slovak republic"
+            },
+            {
+                "name": "Brno University of Technology",
+                "faculty": "Faculty of Information Technology",
+                "year": "2016 - 2017",
+                "degree": "Bachelor degree",
+                "field_of_study": "",
+                "thesis": "",
+                "thesis_description": "",
+                "final_examination": "",
+                "city": "Brno",
+                "country": "Czechia"
+            },
+            {
+                "name": "Jozef Herda's Sports Grammar School",
+                "year": "2012 - 2016",
+                "final_examination": "Slovak language and literature, English language (B2), mathematics, informatics",
+                "city": "Trnava",
+                "country": "Slovak republic"
+            }
+        ]
+    },
+    "sk": {
+        "current": {
+            "name": "Slovenská technická univerzita v Bratislave",
+            "faculty": "Materiálovotechnologická fakulta so sídlom v Trnave",
+            "year": "2020 - Súčasnosť",
+            "degree": "Inžiniersky stupeň",
+            "field_of_study": "Automatizácia a informatizácia procesov v priemysle",
+            "thesis": "",
+            "thesis_description": "",
+            "final_examination": "",
+            "city": "Trnava",
+            "country": "Slovenská republika"
+        },
+        "previous": [
+            {
+                "name": "Slovenská technická univerzita v Bratislave",
+                "faculty": "Materiálovotechnologická fakulta so sídlom v Trnave",
+                "year": "2017 - 2020",
+                "degree": "Bakalársky stupeň",
+                "field_of_study": "Aplikovaná informatika a automatizácia v priemysle",
+                "thesis": "Klientská aplikácia pre zobrazenie dát ako súčasť senzorického informačného systému",
+                "thesis_description": "",
+                "final_examination": "Metódy a techniky návrhu systémov informačných technológií, Základy systémov automatického riadenia",
+                "city": "Trnava",
+                "country": "Slovenská republika"
+            },
+            {
+                "name": "Vysoké učení technické v Brně",
+                "faculty": "Fakulta informačních technologií",
+                "year": "2016 - 2017",
+                "degree": "Bakalársky stupeň",
+                "field_of_study": "",
+                "thesis": "",
+                "thesis_description": "",
+                "final_examination": "",
+                "city": "Brno",
+                "country": "Česká republika"
+            },
+            {
+                "name": "Športové gymnázium Jozefa Herdu v Trnave",
+                "year": "2012 - 2016",
+                "final_examination": "slovenský jazyk, anglický jazyk (B2), matematika, informatika",
+                "city": "Trnava",
+                "country": "Slovenská republika"
+            }
+        ]
+    }
+}

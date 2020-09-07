@@ -1,0 +1,23 @@
+.the-navigation {
+    text-align: center;
+
+    border: 3px solid #006B8F;
+    border-radius: 30px;
+
+    width: max-content;
+    margin: 0px auto;
+    margin-bottom: 20px;
+}
+
+.link {
+    color: lightgray;
+    text-decoration: none;
+
+    padding: 20px;
+    line-height: 40px;
+}
+
+.link:hover {
+    text-decoration: none;
+    color: white;
+}

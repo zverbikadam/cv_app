@@ -4,14 +4,11 @@ import './index.css';
 import App from './App';
 import { BrowserRouter } from 'react-router-dom';
 import * as serviceWorker from './serviceWorker';
-import { LanguageProvider } from './Context/LanguageContext';
 
 ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter>
-      <LanguageProvider>
-        <App />
-      </LanguageProvider>
+      <App />
     </BrowserRouter>
   </React.StrictMode>,
   document.getElementById('root')

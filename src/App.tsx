@@ -1,30 +1,45 @@
 import React from 'react';
 import './App.css';
 import { Switch, Route } from 'react-router-dom';
-import UserInfo from './components/UserInfo/UserInfo';
-import { useLanguageUpdate, useLanguage } from './Context/LanguageContext';
+import UserInfo from './components/UserInfo/TheHeader';
+import { useLanguage, LanguageProvider } from './Context/LanguageContext';
 import User from './data/user-data.json';
+import TheNavigation from './components/TheNavigation/TheNavigation';
+import TheHome from './views/TheHome/TheHome';
+import TheEducation from './views/TheEducation/TheEducation';
+import TheProjects from './views/TheProjects/TheProjects';
+import TheSkills from './views/TheSkills/TheSkills';
 
 
 function App() {
   const enLanguage = useLanguage()
-  const toggleLanguage = useLanguageUpdate();
 
   let user_data = enLanguage ? User.en : User.sk;
 
   return (
     <div className="App">
-      <header className="App-header">
-        <UserInfo user={user_data}/>
-        <button onClick={toggleLanguage}>{enLanguage ? "English" : "Slovenský"}</button>
-      </header>
-      <main>
-        <Switch>
-          <Route>
-
-          </Route>
-        </Switch>
-      </main>
+      <LanguageProvider>
+        <header className="App-header">
+          <UserInfo user={user_data} />
+          <TheNavigation />
+        </header>
+        <main>
+          <Switch>
+            <Route exact path="/">
+              <TheHome />
+            </Route>
+            <Route path="/education">
+              <TheEducation />
+            </Route>
+            <Route path="/projects">
+              <TheProjects />
+            </Route>
+            <Route path="/skills">
+              <TheSkills />
+            </Route>
+          </Switch>
+        </main>
+      </LanguageProvider>
     </div >
   );
 }
