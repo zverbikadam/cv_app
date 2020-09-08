@@ -11,17 +11,17 @@
     padding: 3px 12px;
     width: 50px;
 
-    border: 3px solid #006B8F;
+    border: 3px solid #006b8f;
     border-radius: 30px;
 
-    color: lightgray;
-    background-color: #282c34;
+    color: #006b8f;
+    /* background-color: #282c34; */
 }
 
 
 .button:hover {
     border: 3px solid #00A7E1;
     cursor: pointer;
-    color: white;
+    color:  #00A7E1;
 }
 
