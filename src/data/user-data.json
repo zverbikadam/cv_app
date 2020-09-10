@@ -1,7 +1,7 @@
 {
+    "firstname": "Adam",
+    "surname": "Zverbík",
     "en": {
-        "firstname": "Adam",
-        "surname": "Zverbík",
         "title": "Bc.",
         "contact": {
             "email": "adam.zverbik@mail.t-com.sk",
@@ -18,8 +18,6 @@
         }
     },
     "sk": {
-        "firstname": "Adam",
-        "surname": "Zverbík",
         "title": "Bc.",
         "contact": {
             "email": "adam.zverbik@mail.t-com.sk",

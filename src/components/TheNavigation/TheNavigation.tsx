@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useLanguage } from '../../Context/LanguageContext';
 import { Link } from 'react-router-dom';
 import './TheNavigation.css';
@@ -8,6 +8,9 @@ interface Props {
 }
 
 const TheNavigation = (props: Props) => {
+
+    const [activePath, setActivePath] = useState("Home");
+
     // active language
     const enLanguage = useLanguage();
 
@@ -32,33 +35,78 @@ const TheNavigation = (props: Props) => {
             contact: "Kontakt"
         }
 
+    const handleClick = (event: any) => {
+        // console.dir(event.target.innerText);
+        setActivePath(event.target.innerText);
+    }
+
+
+    // template
     return (
         <nav className="the-navigation">
             <ul className="navigation-list">
                 <li className="navigation-item">
-                    <Link className="link" to="/">{data.home}</Link>
+                    <Link
+                        className={activePath === data.home ? "active link" : "link"}
+                        to="/"
+                        onClick={handleClick}
+                    >
+                        {data.home}
+                    </Link>
                 </li>
                 <li className="navigation-item">
-                    <Link className="link" to="/projects">{data.projects}</Link>
+                    <Link
+                        className={activePath === data.projects ? "active link" : "link"}
+                        to="/projects"
+                        onClick={handleClick}
+                    >
+                        {data.projects}
+                    </Link>
                 </li>
                 <li className="dropdown-item">
-                    <Link className="link" to="#">{data.cv}</Link>
+                    <Link className="link" to="#">
+                        {data.cv}
+                    </Link>
                     <div className="dropdown-content">
                         <ul className="navigation-list subnav-list">
                             <li className="subnav-item">
-                                <Link className="link dropdown-link" to="/cv/education">{data.education}</Link>
+                                <Link
+                                    className={activePath === data.education ? "active link dropdown-link" : "link dropdown-link"}
+                                    to="/cv/education"
+                                    onClick={handleClick}
+                                >
+                                    {data.education}
+                                </Link>
                             </li>
                             <li className="subnav-item">
-                                <Link className="link dropdown-link" to="/cv/work_exp">{data.work_experience}</Link>
+                                <Link
+                                    className={activePath === data.work_experience ? "active link dropdown-link" : "link dropdown-link"}
+                                    to="/cv/work_exp"
+                                    onClick={handleClick}
+                                >
+                                    {data.work_experience}
+                                </Link>
                             </li>
                             <li className="subnav-item">
-                                <Link className="link dropdown-link" to="/cv/skills">{data.skills}</Link>
+                                <Link
+                                    className={activePath === data.skills ? "active link dropdown-link" : "link dropdown-link"}
+                                    to="/cv/skills"
+                                    onClick={handleClick}
+                                >
+                                    {data.skills}
+                                </Link>
                             </li>
                         </ul>
                     </div>
                 </li>
                 <li className="navigation-item">
-                    <Link className="link" to="/contact">{data.contact}</Link>
+                    <Link
+                        className={activePath === data.contact ? "active link" : "link"}
+                        to="/contact"
+                        onClick={handleClick}
+                    >
+                        {data.contact}
+                    </Link>
                 </li>
 
             </ul>

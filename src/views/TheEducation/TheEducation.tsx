@@ -1,7 +1,6 @@
 import React from 'react';
 import { useLanguage } from '../../Context/LanguageContext';
 import TheEducationCard from './TheEducationCard';
-import './TheEducation.css';
 import Education from './../../data/education-data.json';
 import TheEducationList from './TheEducationList';
 

@@ -68,3 +68,9 @@
     display: block;
 }
 
+/* ACTIVE LINK */
+.active {
+    color: #00A7E1;
+    cursor: default;
+}
+

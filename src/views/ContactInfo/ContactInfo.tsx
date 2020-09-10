@@ -4,12 +4,12 @@ interface Props {
     
 }
 
-const TheProjects = (props: Props) => {
+const ContactInfo = (props: Props) => {
     return (
         <div>
-            projects
+            contact me
         </div>
     )
 }
 
-export default TheProjects
+export default ContactInfo
