@@ -42,7 +42,7 @@ const TheNavigation = (props: Props) => {
                     <Link className="link" to="/projects">{data.projects}</Link>
                 </li>
                 <li className="dropdown-item">
-                    <Link className="link" to="/cv">{data.cv}</Link>
+                    <Link className="link" to="#">{data.cv}</Link>
                     <div className="dropdown-content">
                         <ul className="navigation-list subnav-list">
                             <li className="subnav-item">

@@ -4,7 +4,7 @@ import React from 'react';
 import LanguageButton from './LanguageButton/LanguageButton';
 
 // style
-import './TheHeader.css'
+import './TheHeader.css';
 
 interface Props {
     user: any

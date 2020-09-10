@@ -10,10 +10,12 @@
         "birth_date": "16.04.97",
         "gender": "male",
         "nationality": "Slovak",
-        "address": "Koceľova 25",
-        "zip_code": "917 01",
-        "city": "Trnava",
-        "country": "Slovakia"
+        "lives_in": {
+            "pernament_residence": "Trnava, Slovak republic",
+            "other": [
+                "Brno, Czech republic"
+            ]
+        }
     },
     "sk": {
         "firstname": "Adam",
@@ -26,9 +28,11 @@
         "birth_date": "16.04.97",
         "gender": "muž",
         "nationality": "Slovenská",
-        "address": "Koceľova 25",
-        "zip_code": "917 01",
-        "city": "Trnava",
-        "country": "Slovensko"
+        "lives_in": {
+            "pernament_residence": "Trnava, Slovenská republika",
+            "other": [
+                "Brno, Česká republika"
+            ]
+        }
     }
 }
