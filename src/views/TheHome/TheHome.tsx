@@ -23,11 +23,11 @@ const TheHome = (props: Props) => {
 
     return (
         <div className="the-home">
-            <img className="home-image" src={Image} alt="img" width="30%" />
+            <img className="home-image" src={Image} alt="img" />
             <h3 className="home-heading">{data.heading}</h3>
             <p className="home-content">{data.content}</p>
         </div>
     )
 }
 
-export default TheHome
+export default TheHome;

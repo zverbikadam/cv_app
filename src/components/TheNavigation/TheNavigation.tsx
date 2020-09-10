@@ -14,6 +14,7 @@ const TheNavigation = (props: Props) => {
     // active language
     const enLanguage = useLanguage();
 
+    // data to be rendered
     const data = enLanguage ?
         {
             home: "Home",
@@ -35,8 +36,9 @@ const TheNavigation = (props: Props) => {
             contact: "Kontakt"
         }
 
+
+    // handleClick
     const handleClick = (event: any) => {
-        // console.dir(event.target.innerText);
         setActivePath(event.target.innerText);
     }
 
