@@ -14,6 +14,18 @@ import ContactInfo from './views/ContactInfo/ContactInfo';
 function App() {
   const user_name = { firstname: User.firstname, surname: User.surname };
 
+  /**
+   * effect for rate limit check
+   */
+  React.useEffect(() => {
+    fetch(
+      "https://api.github.com/rate_limit",
+      {
+        method: 'GET'
+      }
+    ).then(res => res.json()).then(result => console.log(result))
+  }, [])
+
 
   return (
     <div className="App">
