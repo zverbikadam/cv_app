@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { useLanguage } from '../../Context/LanguageContext';
-import { Link } from 'react-router-dom';
+import { NavLink as Link } from 'react-router-dom';
 import './TheNavigation.css';
 
 interface Props {
@@ -8,8 +8,6 @@ interface Props {
 }
 
 const TheNavigation = (props: Props) => {
-
-    const [activePath, setActivePath] = useState("Home");
 
     // active language
     const enLanguage = useLanguage();
@@ -37,63 +35,62 @@ const TheNavigation = (props: Props) => {
         }
 
 
-    // handleClick
-    const handleClick = (event: any) => {
-        setActivePath(event.target.innerText);
-    }
-
-
     // template
     return (
         <nav className="the-navigation">
             <ul className="navigation-list">
                 <li className="navigation-item">
                     <Link
-                        className={activePath === data.home ? "active link" : "link"}
-                        to="/"
-                        onClick={handleClick}
+                        className="link"
+                        activeClassName="active"
+                        to="/" exact
                     >
                         {data.home}
                     </Link>
                 </li>
                 <li className="navigation-item">
                     <Link
-                        className={activePath === data.projects ? "active link" : "link"}
+                        className="link"
+                        activeClassName="active"
                         to="/projects"
-                        onClick={handleClick}
                     >
                         {data.projects}
                     </Link>
                 </li>
                 <li className="dropdown-item">
-                    <Link className="link" to="#">
+                    <Link
+                        className="link"
+                        activeClassName="active"
+                        to="/cv"
+                        aria-disabled
+                    >
                         {data.cv}
                     </Link>
                     <div className="dropdown-content">
                         <ul className="navigation-list subnav-list">
                             <li className="subnav-item">
                                 <Link
-                                    className={activePath === data.education ? "active link dropdown-link" : "link dropdown-link"}
+                                    className="link dropdown-link"
+                                    activeClassName="active"
                                     to="/cv/education"
-                                    onClick={handleClick}
                                 >
                                     {data.education}
                                 </Link>
                             </li>
                             <li className="subnav-item">
                                 <Link
-                                    className={activePath === data.work_experience ? "active link dropdown-link" : "link dropdown-link"}
+                                    className="link dropdown-link"
+                                    activeClassName="active"
                                     to="/cv/work_exp"
-                                    onClick={handleClick}
                                 >
                                     {data.work_experience}
                                 </Link>
                             </li>
                             <li className="subnav-item">
                                 <Link
-                                    className={activePath === data.skills ? "active link dropdown-link" : "link dropdown-link"}
+                                    className="link dropdown-link"
+                                    activeClassName="active"
                                     to="/cv/skills"
-                                    onClick={handleClick}
                                 >
                                     {data.skills}
                                 </Link>
@@ -103,9 +100,9 @@ const TheNavigation = (props: Props) => {
                 </li>
                 <li className="navigation-item">
                     <Link
-                        className={activePath === data.contact ? "active link" : "link"}
+                        className="link"
+                        activeClassName="active"
                         to="/contact"
-                        onClick={handleClick}
                     >
                         {data.contact}
                     </Link>
