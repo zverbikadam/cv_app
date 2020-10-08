@@ -1,32 +1,24 @@
-import React from 'react';
-import { useLanguage } from '../../Context/LanguageContext';
-import TheEducationCard from './TheEducationCard';
-import Education from './../../data/education-data.json';
-import TheEducationList from './TheEducationList';
+import React from "react";
+import { useLanguage } from "../../Context/LanguageContext";
+import Education from "./../../data/education-data.json";
+import TheEducationList from "./TheEducationList";
 
-
-interface Props {
-    
-}
+interface Props {}
 
 const TheEducation = (props: Props) => {
-    // active language
-    const enLanguage = useLanguage();
+  // active language
+  const enLanguage = useLanguage();
 
-    const data = enLanguage ? Education.en : Education.sk;
-   
+  const data = enLanguage ? Education.en : Education.sk;
 
-    // template
-    return (
-        <div className="the-education">
-            <header className="education-header">
-                <TheEducationCard data={data.current} />
-            </header>
-            <main>
-                <TheEducationList data={data.previous} />
-            </main>
-        </div>
-    )
-}
+  // template
+  return (
+    <div className="the-education">
+      <main>
+        <TheEducationList data={data} />
+      </main>
+    </div>
+  );
+};
 
-export default TheEducation
+export default TheEducation;

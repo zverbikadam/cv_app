@@ -1,7 +1,12 @@
 .repos-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-gap: 10px;
-    width: 97%;
+    grid-gap: 25px;
+    width: 95%;
     margin: 15px auto;
+}
+
+.is-loading {
+    margin-top: 30px;
+    color: black;
 }

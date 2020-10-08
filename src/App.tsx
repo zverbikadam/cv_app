@@ -9,6 +9,7 @@ import TheHome from './views/TheHome/TheHome';
 import TheEducation from './views/TheEducation/TheEducation';
 import TheProjects from './views/TheProjects/TheProjects';
 import ContactInfo from './views/ContactInfo/ContactInfo';
+import WorkExperience from './views/WorkExperience/WorkExperience';
 
 
 function App() {
@@ -45,9 +46,13 @@ function App() {
             <Route path="/projects">
               <TheProjects />
             </Route>
+            <Route path="/cv/work_exp">
+              <WorkExperience />
+            </Route>
             <Route path="/contact">
               <ContactInfo />
             </Route>
+            
           </Switch>
         </main>
       </LanguageProvider>

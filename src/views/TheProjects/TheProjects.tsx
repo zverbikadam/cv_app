@@ -1,76 +1,74 @@
-import React, { useEffect, useState } from 'react'
-import { getRepos } from './../../API/github-api';
-import ReposCard from '../../components/ReposCard/ReposCard';
-import './TheProjects.css';
-import { useLanguage } from '../../Context/LanguageContext';
+import React, { useEffect, useState } from "react";
+import { getRepos } from "./../../API/github-api";
+import ReposCard from "../../components/ReposCard/ReposCard";
+import "./TheProjects.css";
+import { useLanguage } from "../../Context/LanguageContext";
 
-interface Props {
-
-}
+interface Props {}
 
 const TheProjects = (props: Props) => {
-    // my username on github
-    const username = "zverbikadam";
+  // my username on github
+  const username = "zverbikadam";
 
-    // state
-    const [data, setData] = useState([]);
-    const [isLoading, setIsLoading] = useState(true);
+  // state
+  const [data, setData] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
 
-    const enLanguage = useLanguage();
+  const enLanguage = useLanguage();
 
-    const header_text = enLanguage ?
-        "These projects are public repositories from my github account. They are accessed through github API."
-        :
-        "Toto sú verejné repozitáre na mojom github účte. Získavané sú cez github API."
+  const header_text = enLanguage
+    ? "These projects are public repositories from my github account. They are accessed through github API."
+    : "Toto sú verejné repozitáre na mojom github účte. Získavané sú cez github API.";
 
-
-    // first time render effect
-    useEffect(() => {
-        /**
-        * 
-        * @param query query string to search on github
-        * in this case search query === username
-        * @description AXIOS call
-        */
-        async function getData(query: string) {
-            let reposData = await getRepos(query).then(result => result.map((repo: any) => extractRepo(repo)));
-            return { reposData };
-        }
-        // TODO add loading functionality
-        getData(username)
-            .then(result => {
-                setData(result.reposData);
-                setIsLoading(false);
-            })
-            .catch(error => {
-                console.log(error)
-                setIsLoading(false);
-            });
-    }, [])
-
+  // first time render effect
+  useEffect(() => {
     /**
-     * 
-     * @param param0 
-     * Destructuring repository from github
+     *
+     * @param query query string to search on github
+     * in this case search query === username
+     * @description AXIOS call
      */
-    const extractRepo = ({ name, description, html_url: html }: any) => {
-        return { name, description, html }
+    async function getData(query: string) {
+      let reposData = await getRepos(query).then((result) =>
+        result.map((repo: any) => extractRepo(repo))
+      );
+      return { reposData };
     }
+    // TODO add loading functionality
+    getData(username)
+      .then((result) => {
+        setData(result.reposData);
+        setIsLoading(false);
+      })
+      .catch((error) => {
+        console.log(error);
+        setIsLoading(false);
+      });
+  }, []);
 
-    return (
-        <>
-            <header>{header_text}</header>
-            <div className="repos-container">
+  /**
+   *
+   * @param param0
+   * Destructuring repository from github
+   */
+  const extractRepo = ({ name, description, html_url: html }: any) => {
+    return { name, description, html };
+  };
 
-                {
-                    isLoading ? <h1>...Loading. Please wait!</h1> :
-                        data.map((repo: any, index: number) => (
-                            <ReposCard key={index} repo={repo} />
-                        ))
-                }
-            </div>
-        </>
-    )
-}
+  return (
+    <>
+      <header>{header_text}</header>
+      {isLoading ? (
+        <h1 className="is-loading">...Loading...</h1>
+      ) : (
+        <div className="repos-container">
+          {data.map((repo: any, index: number) => (
+            <ReposCard key={index} repo={repo} />
+          ))}
+        </div>
+      )}
+    </>
+  );
+};
 
-export default TheProjects
+export default TheProjects;
