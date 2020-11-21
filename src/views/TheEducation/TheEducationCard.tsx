@@ -1,5 +1,5 @@
 import React from 'react'
-import './TheEducationCard.css';
+import '../TheCard.css';
 import { useLanguage } from '../../Context/LanguageContext';
 
 
@@ -28,7 +28,7 @@ const TheEducationCard = (props: Props) => {
 
 
     return (
-        <div className="education-card">
+        <div className="card">
             <header className="card-header">
                 <h2 className="card-name">{data.faculty?.length ? `${data.name}, ${data.faculty}` : data.name}</h2>
             </header>

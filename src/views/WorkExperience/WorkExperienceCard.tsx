@@ -1,5 +1,5 @@
 import React from "react";
-import "../TheEducation/TheEducationCard.css";
+import "../TheCard.css";
 
 interface Props {
   data: any;
@@ -10,7 +10,7 @@ const WorkExperienceCard = (props: Props) => {
   const { data } = props;
 
   return (
-    <div className="education-card">
+    <div className="card">
       <header className="card-header">
         <h2 className="card-name">{data.name}</h2>
       </header>

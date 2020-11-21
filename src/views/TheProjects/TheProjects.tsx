@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { getRepos } from "./../../API/github-api";
 import ReposCard from "../../components/ReposCard/ReposCard";
-import "./TheProjects.css";
 import { useLanguage } from "../../Context/LanguageContext";
 
 interface Props {}
