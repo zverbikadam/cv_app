@@ -20,6 +20,10 @@ const TheProjects = (props: Props) => {
     ? "These projects are public repositories from my github account. They are accessed through github API."
     : "Toto sú verejné repozitáre na mojom github účte. Získavané sú cez github API.";
 
+  const error_message = enLanguage
+    ? "Loading data from github API failed. Either check your connection, or try again later."
+    : "Načítanie dát z github API zlyhalo. Skontrolujte svoje pripojenie, alebo to skúste znovu neskôr.";
+
   // first time render effect
   useEffect(() => {
     /**
@@ -42,9 +46,10 @@ const TheProjects = (props: Props) => {
       })
       .catch((error) => {
         console.log(error);
+        alert(`${error.message}:\n${error_message}`);
         setIsLoading(false);
       });
-  }, []);
+  }, [error_message]);
 
   /**
    *

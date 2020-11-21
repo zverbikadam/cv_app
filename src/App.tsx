@@ -10,6 +10,7 @@ import TheEducation from './views/TheEducation/TheEducation';
 import TheProjects from './views/TheProjects/TheProjects';
 import ContactInfo from './views/ContactInfo/ContactInfo';
 import WorkExperience from './views/WorkExperience/WorkExperience';
+import TheSkills from './views/TheSkills/TheSkills';
 
 
 function App() {
@@ -52,7 +53,9 @@ function App() {
             <Route path="/contact">
               <ContactInfo />
             </Route>
-            
+            <Route path="/cv/skills">
+              <TheSkills />
+            </Route>
           </Switch>
         </main>
       </LanguageProvider>
