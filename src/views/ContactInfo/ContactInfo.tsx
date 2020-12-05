@@ -11,7 +11,7 @@ const ContactInfo = (props: Props) => {
         <ul>
           <li>
             <a
-              href="www.linkedin.com/in/zverbikadam"
+              href="https://www.linkedin.com/in/zverbikadam"
               target="_blank"
               rel="noopener noreferrer"
             >
