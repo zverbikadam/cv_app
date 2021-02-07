@@ -32,9 +32,9 @@ const TheProjects = (props: Props) => {
      * @description AXIOS call
      */
     async function getData(query: string) {
-      let reposData = await getRepos(query).then((result) =>
-        result.map((repo: any) => extractRepo(repo))
-      );
+      let reposData = await getRepos(query)
+        .then((response) => response.json())
+        .then((result) => result.map((repo: any) => extractRepo(repo)));
       return { reposData };
     }
     // TODO add loading functionality
